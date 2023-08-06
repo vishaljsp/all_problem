@@ -1,0 +1,26 @@
+{% block heder %}
+<link rel="stylesheet" href="/static/css/index.css">
+<link rel="stylesheet" href="/static/css/blog.css">
+<title>{{pg_dtails.post_title | truncatechars:70}}</title>
+
+
+<meta name="description" content="{{pg_dtails.post_meta_discreption | truncatechars:170}}">
+<link rel="canonical" href="https://www.futeducation.com/{{pg_dtails.htmlbcslug}}">
+
+{% comment %} og tag  {% endcomment %}
+<meta property="og:title" content="{{pg_dtails.post_title | truncatechars:70}}">
+<meta property="og:site_name" content="Future Education">
+<meta property="og:url" content=https://www.futeducation.com/{{pg_dtails.htmlbcslug}}>
+<meta property="og:description" content="{{pg_dtails.post_meta_discreption | truncatechars:170}}">
+<meta property="og:type" content="website">
+<meta property="og:image" content=https://www.futeducation.com{{pg_dtails.post_image.url}}>
+
+{% comment %} twiter tag  {% endcomment %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Futeducation">
+<meta name="twitter:title" content="{{pg_dtails.post_title | truncatechars:70}}">
+<meta name="twitter:description" content="{{pg_dtails.post_meta_discreption | truncatechars:70}}">
+<meta name="twitter:image" content="https://www.futeducation.com{{pg_dtails.post_image.url}}">
+
+
+{% endblock heder %}
